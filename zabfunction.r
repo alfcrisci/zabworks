@@ -1,6 +1,7 @@
 library(qdap)
 library(XLConnect)
 library(stringr)
+library(readr)
 
 files=list.files(pattern="text")
 
