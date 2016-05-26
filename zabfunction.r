@@ -31,6 +31,7 @@ lead=lapply(files,function(x) try(zablead(qdap::clean(read_file(x)))))
 corpus=lapply(files,function(x) try(zabcorpus(qdap::clean(read_file(x)))))
 legenda=lapply(files,function(x) try(zablegenda(qdap::clean(read_file(x)))))
 
+xyl_data=data.frame(sources=files,lead=unlist(lead),corpus=unlist(corpus),legenda=unlist(legenda))
 
 
 xyl_data_ord=xyl_data[order(as.numeric(gsub("_([A-Z]*)*","",gsub(".txt","",gsub("text","",files)),perl=T))),]
