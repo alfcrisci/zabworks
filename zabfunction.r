@@ -26,10 +26,10 @@ zablegenda=function(x) {
 }
 
 
-title=lapply(files,function(x) try(zabtitle(qdap::clean(read_file(x)))))
-lead=lapply(files,function(x) try(zablead(qdap::clean(read_file(x)))))
-corpus=lapply(files,function(x) try(zabcorpus(qdap::clean(read_file(x)))))
-legenda=lapply(files,function(x) try(zablegenda(qdap::clean(read_file(x)))))
+title=lapply(files,function(x) try(clean(zabtitle(qdap::clean(read_file(x))))))
+lead=lapply(files,function(x) try(clean(zablead(qdap::clean(read_file(x))))))
+corpus=lapply(files,function(x) try(clean(zabcorpus(qdap::clean(read_file(x))))))
+legenda=lapply(files,function(x) try(clean(zablegenda(qdap::clean(read_file(x))))))
 
 xyl_data=data.frame(sources=files,lead=unlist(lead),corpus=unlist(corpus),legenda=unlist(legenda))
 
